@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+let sum = (a, b) => a + b;
+alert( sum(57, 4) ); 
+let sum1 = function(a, b) {
+  return a + b;
+};
+alert( sum1(31, 4) ); 
+
+
+var stop = false, age = 18;
+
+age > 18 ? (
+    alert("Хорошо, вы можете продолжить."),
+    location.assign("continue.html")
+) : (
+    stop = true,
+    alert("Простите, вы ещё так юны!")
+);
+
+
+let a=[{name:'Бананы', price:600, date: new Date('2022-01-10'), 'country':'Эквадор'}, 
+{name:'Картофель', price:400, date: new Date('2022-03-14'), 'country':'Беларусь'}, 
+{name:'Морковь', price:620, date: new Date('2022-04-19'), 'country':'Россия'}, 
+{name:'Лук', price:600, date: new Date('2022-03-30'), 'country':'Монголия'}, 
+{name:'Яблоки', price:900, date: new Date('2022-02-21'), 'country':'Китай'}];
+
+a.sort((a, b)=>{if(a.price>b.price); return a.price-b.price});
+
+a.map((c)=>document.write(
+`<hr><p>Наименование товара: ${c.name}</p> 
+<p>Цена, руб: ${c.price}</p>
+<p>Дата: ${c.date.toISOString().split('T')[0]}</p>
+<p>Страна происхождения: ${c.country}</p><hr>`));
+
+
+c1=a.filter((d)=>{if (d.country==='Россия') return d;});
+
+c1.map((c)=>document.write(
+`<br>
+<h3>Выборка товаров из России</h3>
+<hr><p>Наименование товара: ${c.name}</p> 
+<p>Цена, руб: ${c.price}</p>
+<p>Дата: ${c.date.toISOString().split('T')[0]}</p>
+<p>Страна происхождения: ${c.country}</p><hr>`));
+*/
+
+
+let g=[{name:'Престиж', city:'Пинеровка', kolvo_zv:2, cena:6200, time:'14:00'},
+{name:'Элита+', city:'Литяжевка', kolvo_zv:3, cena:8500, time:'16:00'},
+{name:'Козырь', city:'Балашов', kolvo_zv:2, cena:7000, time:'13:00'},
+{name:'Премиум', city:'Тростянка', kolvo_zv:4, cena:11200, time:'12:00'}];
+
+let tab;
+
+g.sort((a, b)=>{if(a.kolvo_zv>b.kolvo_zv); return b.kolvo_zv-a.kolvo_zv});
+
+tab = g.map((c)=>  
+`<tr><td>${c.name}</td><td>${c.city}</td><td>${c.kolvo_zv}</td><td>${c.cena}</td><td>${c.time}</td></tr>`);
+
+document.write(`<table><tr><th>Название гостиницы</th><th>Город</th><th>Количество звезд</th>
+    <th>Цена номера в сутки, руб</th><th>Время заезда</th></tr>${tab}</table>`);
+
+
+
+    c1=g.filter((d)=>{if (d.cena<7000) return d;});
+
+    tab = c1.map((c)=>  
+`<tr><td>${c.name}</td><td>${c.city}</td><td>${c.kolvo_zv}</td><td>${c.cena}</td><td>${c.time}</td></tr>`);
+
+document.write(`<table><tr><th>Название гостиницы</th><th>Город</th><th>Количество звезд</th>
+    <th>Цена номера в сутки, руб</th><th>Время заезда</th></tr>${tab}</table>`);
+
+</script>
+
+
+</html>
